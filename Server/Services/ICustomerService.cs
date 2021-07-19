@@ -9,6 +9,7 @@ namespace Customers.Server.Services
 {
     public interface ICustomerService
     {
-        JsonResult CreateCustomer(Customer customer);
+        FileStreamResult CreateCustomerClient(Customer customer);
+        string CreateCustomerServer(Customer customer, string path);
     }
 }

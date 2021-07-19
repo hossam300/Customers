@@ -14,5 +14,9 @@
     <ProjectReference Include="..\Shared\Customers.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\JsonFiles\" />
+  </ItemGroup>
+
 
 </Project>
