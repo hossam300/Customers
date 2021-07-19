@@ -1,0 +1,58 @@
+﻿@page "/"
+@inject HttpClient Http;
+@inject IJSRuntime jSRuntime;
+<EditForm Model="@customer" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="row">
+        <div class="col-md-4">
+            <label class="custom-control-label" for="fristName">
+                frist Name
+            </label>
+        </div>
+        <div class="col-md-8">
+            <InputText id="fristName" @bind-Value="customer.FristName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label class="custom-control-label" for="lastName">
+                last Name
+            </label>
+        </div>
+        <div class="col-md-8">
+            <InputText id="lastName" @bind-Value="customer.LastName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label class="custom-control-label" for="emailaddress">
+                Email Address
+            </label>
+        </div>
+        <div class="col-md-8">
+            <InputText id="emailaddress" @bind-Value="customer.EmailAddress" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label class="custom-control-label" for="subscribed">
+                Subscribed
+            </label>
+        </div>
+        <div class="col-md-8">
+            <InputCheckbox id="subscribed" @bind-Value="customer.Subscribed" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label class="custom-control-label" for="dateOfBirth">
+                Date Of Birth
+            </label>
+        </div>
+        <div class="col-md-8">
+            <InputDate id="dateOfBirth" @bind-Value="customer.dob" />
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+</EditForm>
