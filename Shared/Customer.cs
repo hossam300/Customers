@@ -7,7 +7,6 @@ namespace Customers.Shared
 {
     public class Customer
     {
-        public int Id { get; set; }
         [Required]
         public string FristName { get; set; }
         [Required]
@@ -16,6 +15,6 @@ namespace Customers.Shared
         [EmailAddress]
         public string EmailAddress { get; set; }
         public bool Subscribed { get; set; }
-        public DateTime dob { get; set; }
+        public DateTime Dob { get; set; }
     }
 }

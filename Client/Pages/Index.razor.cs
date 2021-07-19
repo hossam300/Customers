@@ -22,11 +22,11 @@ namespace Customers.Client.Pages
         public async Task HandleValidSubmit()
         {
             var serializedCustomer = await Http.PostAsJsonAsync<Customer>("/api/Customers/CreateCustomer", customer);
-            var serializedObject = JsonConvert.SerializeObject(customer, new JsonSerializerSettings());
+            var serializedObject = JsonConvert.SerializeObject(serializedCustomer, new JsonSerializerSettings());
             byte[] bytes = Encoding.UTF8.GetBytes(serializedObject);
             await jSRuntime.InvokeAsync<object>(
             "saveAsFile",
-            Guid.NewGuid().ToString()+".json",
+            $"{customer.FristName}_{customer.LastName}" + ".json",
             Convert.ToBase64String(bytes));
         }
     }
