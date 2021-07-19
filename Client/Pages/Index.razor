@@ -6,53 +6,58 @@
     <ValidationSummary />
     <div class="row">
         <div class="col-md-4">
-            <label class="custom-control-label" for="fristName">
+            <label class="col-form-label-lg" for="fristName">
                 frist Name
             </label>
         </div>
-        <div class="col-md-8">
-            <InputText id="fristName" @bind-Value="customer.FristName" />
+        <div class="col-md-6">
+            <InputText id="fristName" @bind-Value="customer.FristName" class="form-control" />
         </div>
     </div>
     <div class="row">
+
         <div class="col-md-4">
-            <label class="custom-control-label" for="lastName">
+            <label class="col-form-label-lg" for="lastName">
                 last Name
             </label>
         </div>
-        <div class="col-md-8">
-            <InputText id="lastName" @bind-Value="customer.LastName" />
+        <div class="col-md-6">
+            <InputText id="lastName" @bind-Value="customer.LastName" class="form-control" />
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-4">
-            <label class="custom-control-label" for="emailaddress">
+            <label class="col-form-label-lg" for="emailaddress">
                 Email Address
             </label>
         </div>
-        <div class="col-md-8">
-            <InputText id="emailaddress" @bind-Value="customer.EmailAddress" />
+        <div class="col-md-6">
+            <InputText id="emailaddress" @bind-Value="customer.EmailAddress" class="form-control" />
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
-            <label class="custom-control-label" for="subscribed">
+            <label class="col-form-label-lg" for="subscribed">
                 Subscribed
             </label>
         </div>
-        <div class="col-md-8">
-            <InputCheckbox id="subscribed" @bind-Value="customer.Subscribed" />
+        <div class="col-md-6">
+            <InputCheckbox id="subscribed" @bind-Value="customer.Subscribed" class="form-control form-check-inline" />
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
-            <label class="custom-control-label" for="dateOfBirth">
+            <label class="col-form-label-lg" for="dateOfBirth">
                 Date Of Birth
             </label>
         </div>
-        <div class="col-md-8">
-            <InputDate id="dateOfBirth" @bind-Value="customer.dob" />
+        <div class="col-md-6">
+            <InputDate id="dateOfBirth" @bind-Value="customer.dob"  class="form-control" />
         </div>
     </div>
-    <button type="submit">Submit</button>
+    <div class="row">
+        <div class="col-md-8"></div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
 </EditForm>
